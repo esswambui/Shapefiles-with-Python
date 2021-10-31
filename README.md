@@ -36,4 +36,21 @@ for index, row in pointDf.iterrows():
 #close fiona object
 pointShp.close()
 ```
-## Vusialising the Shapefiles.
+## Visualising the Shapefiles.
+### kenyagpd.iptnb
+Install geopandas 
+```python
+pip install geopandas
+```
+Read in the shapefiles *(provided in the **geokenya** folder)* using geopandas
+plot the geodataframe
+Use contexily to plot a basemap that can be rendered on the web.
+```python
+import contextily as ctx
+fig, ax = plt.subplots(figsize=(8,12))
+ke_lines.plot(ax=ax, alpha=0.6)
+ke_points.plot(ax=ax, alpha=0.6)
+ctx.add_basemap(ax)
+ax.axis('off')
+```
+**REMBER TO ADJUST THE FILE PATH ACCORDING TO YOUR SPECIFIC FILE NAME OR FOLDER YOU USE**
