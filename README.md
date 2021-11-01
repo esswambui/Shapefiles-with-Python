@@ -7,7 +7,7 @@
 - Contextily
 ## Creating Shapefiles
 ### ShapefileGeneration.ipynb
-I used the *fiona library* to create shapes files from coordinates entered in
+I used the *fiona library* to create shapefiles from coordinates entered in
 csv files. 
 ```python
 pip install fiona
@@ -37,13 +37,13 @@ for index, row in pointDf.iterrows():
 pointShp.close()
 ```
 ## Visualising the Shapefiles.
-### kenyagpd.iptnb
+### kenyagpd.ipynb
 Install geopandas 
 ```python
 pip install geopandas
 ```
-Read in the shapefiles *(provided in the **geokenya** folder)* using geopandas
-plot the geodataframe
+Read in the shapefiles *(provided in the **geokenya** folder)* using geopandas and
+plot the geodataframe.            
 Use contexily to plot a basemap that can be rendered on the web.
 ```python
 import contextily as ctx
